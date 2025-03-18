@@ -1,6 +1,9 @@
-.button-container{
-  display: flex;
-  gap: 10px;
+img{
+  display:block;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .red-text{
   color:red;
@@ -21,7 +24,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #4e4f1c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

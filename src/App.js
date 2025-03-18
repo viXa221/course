@@ -1,33 +1,39 @@
-// import logo from './logo.svg';
+// import login from './login.jpg';
 import { useState } from 'react';
+//useState хука ни позвовява в случая, да следим дали 
+// потребителя е на логин или регистър страницата
 import './App.css';
 
 function App() {
+  const [nameRegister, passRegister, setIsLogin] = useState(true);
   return (
     <div className="App">
       <header className="App-header">
-      <p style={{color:'red'}}>Моля, въведете name и pass долу:</p>
-
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      <p style={{color:'red'}}>Моля, въведете име и парола долу:</p>
+      {/* <img src={login.jpg} className="App-logo" alt="logo" /> */}
+      <img src={require('./login2.jpg')} alt='login' width='100px'></img>
 
         <p>
          </p>
         <form>
-          <label id='nameRegister()'>Enter your name:
+          <label id='nameRegister()'>Въведи името си тук:
             <input type="text"/>
           </label>
         </form>
         <br></br>
         <form>
-          <label id='passRegister()'>Enter your password:
+          <label id='passRegister()'>Въведи паролата си тук:
             <input type="text"/>
           </label>
           </form>
         <br></br>
         <div style={{ display: 'flex', gap: '10px'}}>
-        <button onclick="SignIn()" type="button" placeholder="">Sign In!</button>
-        <p style={{ fontSize: '20px'}}>or</p>
-        <button onclick="LogIn()" type="button" placeholder="">Log In!</button>
+        {/* <button onclick="Register()" type="button" placeholder="">Register!</button> */}
+        <button id="newRegister()" onClick={() => setIsLogin(! nameRegister)}>
+          {nameRegister ? "Нямаш акаунт тук? Регистрирай се!" : "Вече имаш създаден продил? Влез!"}
+        </button>
+        <p style={{ fontSize: '20px'}}>или</p>
+                <button id="LogIn()" type="button" placeholder="">Влез си в акаунта! </button>
         </div>
       <a 
       className="App-link"
@@ -40,7 +46,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p>При проблем, натисни тук</p>
+          <p>При проблем, натисни тук!</p>
 
          </a>
       </header>
