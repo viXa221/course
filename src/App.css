@@ -1,3 +1,24 @@
+.MainText{
+  display: flex;
+  align-items: center; /*центрира текста по вертикал*/
+  justify-content: center; /*центрира текста по хоризонтал*/
+  height: 200px;  /*задава височината на целия екран*/
+  font-size: 24px;
+}
+.navBar{
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 20px; /*разстоянието м/у елементите */
+  padding: 16px;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.logo{
+width: 100px;
+height: 100px;
+}
 img{
   display:block;
   background: none;

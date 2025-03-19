@@ -9,12 +9,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <p style={{color:'red'}}>Моля, въведете име и парола долу:</p>
       {/* <img src={login.jpg} className="App-logo" alt="logo" /> */}
-      <img src={require('./login2.jpg')} alt='login' width='100px'></img>
-
         <p>
          </p>
+         <div className='navBar'>
+         <img src={require('./strong.png')} alt='strong' className='logo'></img>
+          <h3>Начало</h3>
+          <h3>Продукти</h3>
+          <h3>Стани част от екипа!</h3>
+          </div>
+          <p style={{color:'red'}} className='MainText'>Най-добрият сайт за хранителни добавки!</p>
         <form>
           <label id='nameRegister()'>Въведи името си тук:
             <input type="text"/>
