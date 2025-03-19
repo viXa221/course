@@ -1,9 +1,13 @@
+.LogInInfo{
+  color: black;
+}
 .MainText{
   display: flex;
   align-items: center; /*центрира текста по вертикал*/
   justify-content: center; /*центрира текста по хоризонтал*/
   height: 200px;  /*задава височината на целия екран*/
   font-size: 24px;
+  color: black;
 }
 .navBar{
   font-size: 0.875rem;
@@ -14,6 +18,7 @@
   position: absolute;
   top:0;
   left: 0;
+  color: black;
 }
 .logo{
 width: 100px;
@@ -45,7 +50,7 @@ img{
 }
 
 .App-header {
-  background-color: #4e4f1c;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
