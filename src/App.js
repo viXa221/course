@@ -1,18 +1,17 @@
 // import login from './login.jpg';
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 //useState хука ни позвовява в случая, да следим дали 
 // потребителя е на логин или регистър страницата
+//импортирам userList-a, ама дали е така не знам :)
 import './App.css';
 
 function App() {
-  const [nameRegister, passRegister, setIsLogin] = useState(true);
+  const [nameRegister, setIsLogin] = useState(true);
   return (
     <div className="App">
       <header className="App-header">
-      {/* <img src={login.jpg} className="App-logo" alt="logo" /> */}
-        <p>
-         </p>
-
          <div className='navBar'>
          <img src={require('./strong.png')} alt='strong' className='logo'></img>
           <h3>Начало</h3>
@@ -20,6 +19,7 @@ function App() {
           <h3>Стани част от екипа!</h3>
           <h3>Помощ</h3>
           </div>
+          
 
           <p style={{color:'red'}} className='MainText'>Най-добрият сайт за хранителни добавки!</p>
         <form>
@@ -43,10 +43,7 @@ function App() {
         <br></br>
 
         <div style={{ display: 'flex', gap: '10px'}}>
-        {/* <button onclick="Register()" type="button" placeholder="">Register!</button> */}
-        <button id="newRegister()" onClick={() => setIsLogin(! nameRegister)}>
-          {nameRegister ? "Нямаш акаунт ? Регистрирай се!" : "Вече имаш създаден продил? Влез!"}
-        </button>
+                <button id="RegisterIn()" type="button" placeholder="">Регистрирай се! </button>
         <p style={{ fontSize: '20px', color: 'black'}}>или</p>
                 <button id="LogIn()" type="button" placeholder="">Влез си в акаунта! </button>
         </div>
@@ -61,8 +58,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer">
           <p>При проблем, натисни тук!</p>
-         </a>
-
+         </a>     
       </header>
     </div>
   );
