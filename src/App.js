@@ -1,7 +1,8 @@
 // import login from './login.jpg';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Registers from './Registers.json';
 //useState хука ни позвовява в случая, да следим дали 
 // потребителя е на логин или регистър страницата
 //импортирам userList-a, ама дали е така не знам :)
