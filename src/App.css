@@ -34,7 +34,7 @@ img{
 .red-text{
   color:red;
 }
-.App {
+.home {
   text-align: center;
 }
 
@@ -49,7 +49,7 @@ img{
   }
 }
 
-.App-header {
+.home-header {
   background-color: #ffffff;
   min-height: 100vh;
   display: flex;
