@@ -1,12 +1,11 @@
-import header from '../components/header'
-import home from "./home"
-import About from './About';
+import Header from '../components/header'
+
+// import Header from '../components/header';
 
 
 export default function Contact(){
     return(
-      <>
-  <header/> 
+      <Header>
               <h3>Помощ</h3>
               <a className="App-link"
         href="mailto:someone@example.com">      
@@ -19,6 +18,6 @@ export default function Contact(){
             rel="noopener noreferrer">
             <p>При проблем, натисни тук!</p>
            </a>
-      </>
-    )
+           </Header>       
+    );
   }
