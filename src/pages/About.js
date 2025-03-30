@@ -1,6 +1,6 @@
 import Header from '../components/header'
-import Contact from './Contact';
-import Home from '../pages/home';
+// import Contact from './Contact';
+// import Home from '../pages/home';
 // import Header from '../components/header';
 
 

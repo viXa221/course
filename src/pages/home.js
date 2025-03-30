@@ -1,10 +1,13 @@
+
 import Header from '../components/header';
 // import Contact from './Contact';
 // import About from './About';
 import strongLogo from '../assets/strong.png';
+import App from './pages/App.js';
+// import Register from '/register';
+
 
 export default function Home(){
-  // const [nameRegister] = useState(true);
     return (
       <div className="home">
         <Header className="home-header">
