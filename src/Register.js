@@ -1,36 +1,40 @@
 import { useState } from 'react';
 
 const Register = () => {
-    const [nameRegister, setNameRegister] = useState('');
-    const [passRegister, setPassRegister] = useState('');
+    const [username, setUserName] = useState('');//useState го използвам, за да запази стойностите и промените
+    const [password, setPassword] = useState('');
+    //password и username съхраняват информацията, която потребителя е написал в тези 2 полета
+//
 
-    const handleRegister = () => {
-        if(!nameRegister || !passRegister){
-            alert('Моля, попълнете всички полета!');
+
+    const handleRegister = () => {//тук се проверява дали идвете полета са попълнени, ако да:
+        if(!username || !password){//if-a проверява, дали някое от полетата не е попълнено и те връща обратно, за да го попълниш
+            alert('Моля, попълнете  полетата!');
             return;
         }
 
-        const userData = { username: nameRegister, password: passRegister};
-
-        localStorage.setItem('registeredUser',  JSON.stringify(userData));
-
-        alert('Успешна регистрация!');
+        const userData = {username, password};//създава обектите в userData със стойностите му
+        localStorage.setItem("registeredUser", JSON.stringify(userData));//записва го тук като текст чрез json
+        console.log('Регистрацията е направена успешно!');//показва резултата
+        setUserName('');//тук се изчистват полетата,  за да се премине кум следващия етап
+        setPassword('');
     };
 
     return(
         <div>
             <h2>Регистрация</h2>
-            <input type='text' placeholder='Въведете име' value={nameRegister}
+            <input type='text' placeholder='Въведете име' value={username}
             onChange={(e) => 
-                setNameRegister(e.target.value)}
+                setUserName(e.target.value)}
                 />
-                <input type='password' placeholder='Въведете парола' value={passRegister}
-                onChange={(e) => setPassRegister(e.target.value)}
+                <input type='Password' placeholder='Въведете парола' value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 />
                 <button onClick={handleRegister}>Регистрация</button>
         </div>
     )
 }
+export default Register;
 
 //Този файл създава форма за регистрация. В него има две полета за въвеждане, едно за 
 // потребителско име и едно за парола - и бутон за изпращане на данните

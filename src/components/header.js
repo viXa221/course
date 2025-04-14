@@ -3,7 +3,7 @@
 // import About from '../pages/About';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+export const Header = () => {
     return(
         <nav>
             <Link to="/">Начало</Link>
@@ -13,13 +13,13 @@ const Header = () => {
         </nav>
     )
 }
-// export default function Header({children}){
+// export default function Header({children}){ children - е свойство, което позволява да сложиш съдържание вътре в компонента
 //     return(
 //         <div className='header'>
 //         <p style={{color:'red'}} className='MainText'>Най-добрият сайт за хранителни добавки!</p>
 //         {children} 
-//         </div>
+//         </div
 //     )
-// }
+// }>
 
 export default Header;

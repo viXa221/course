@@ -3,11 +3,11 @@ import Header from '../components/header';
 // import Contact from './Contact';
 // import About from './About';
 import strongLogo from '../assets/strong.png';
-import App from './pages/App.js';
+// import App from './pages/App.js';
 // import Register from '/register';
 
 
-export default function Home(){
+export function Home(){
     return (
       <div className="home">
         <Header className="home-header">
@@ -44,6 +44,6 @@ export default function Home(){
         </Header>
       </div>
     );
-  }
-
+  };
+export default Home;
   

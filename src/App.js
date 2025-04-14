@@ -1,14 +1,19 @@
-// import { useState } from 'react';
+//  import { useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-// import  React, { useReF } from 'react';
-import Home from "./pages/home"
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import NoPage from "./pages/NoPage";
-import Header from "./components/header";
-import Register from './Register';
 
-console.log("App is rendering..");
+import Header from './components/header';
+import Register from './Register';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/home';
+import NoPage from './pages/NoPage';
+
+console.log("App is rendering..");//проверявам, дали излиза резултата  в console-ата;
+
+
+
 
 export default function App(){
   return(
